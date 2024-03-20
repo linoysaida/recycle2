@@ -1,7 +1,4 @@
-
-
 package com.example.myapplication;
-
 
 import android.annotation.SuppressLint;
 import android.app.Dialog;
@@ -19,12 +16,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.button.MaterialButton;
 
-public class MainActivity extends AppCompatActivity {
+public class LogIn extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_log_in);
 
         EditText username = findViewById(R.id.username);
         EditText password = findViewById(R.id.password);
@@ -36,11 +33,11 @@ public class MainActivity extends AppCompatActivity {
             String passwordInput = password.getText().toString();
 
             if (usernameInput.equals("admin") && passwordInput.equals("admin")) {
-                Toast.makeText(MainActivity.this, "Login successful", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(MainActivity.this, HomePage.class);
+                Toast.makeText(LogIn.this, "Login successful", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(LogIn.this, HomePage.class);
                 startActivity(intent);
             } else {
-                Toast.makeText(MainActivity.this, "Login failed", Toast.LENGTH_SHORT).show();
+                Toast.makeText(LogIn.this, "Login failed", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -65,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
         @SuppressLint("InflateParams") View popupView = getLayoutInflater().inflate(R.layout.activity_main2, null);
 
         // Create a new dialog
-        Dialog popupDialog = new Dialog(MainActivity.this);
+        Dialog popupDialog = new Dialog(LogIn.this);
         popupDialog.setContentView(popupView);
         popupDialog.setCancelable(true);
 
