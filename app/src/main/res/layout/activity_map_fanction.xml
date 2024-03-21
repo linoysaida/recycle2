@@ -12,7 +12,7 @@
         tools:context=".MapActivity">
 
 
-        <!-- EditText לכתובת חיפוש -->
+
         <EditText
             android:id="@+id/search_text"
             android:layout_width="match_parent"
@@ -21,11 +21,15 @@
             android:layout_marginTop="10dp"
             android:layout_marginEnd="10dp"
             android:layout_marginBottom="10dp"
+            android:autofillHints=""
             android:background="#46000000"
             android:drawableStart="@android:drawable/ic_menu_search"
             android:elevation="4dp"
             android:hint="חיפוש פח"
-            android:padding="10dp" />
+            android:inputType="text"
+            android:padding="10dp"
+            android:textColorHint="#4E342E"
+            tools:ignore="HardcodedText,TextFields" />
 
     </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
