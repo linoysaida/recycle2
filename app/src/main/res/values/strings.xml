@@ -9,4 +9,11 @@
     <string name="todo">TODO</string>
     <string name="title_activity_map">MapActivity</string>
     <string name="title_activity_add">AddActivity</string>
+    <string name="barcode_amp_qr_code_scanner"><![CDATA[barcode & QR code scanner]]></string>
+    <string name="camera">camera</string>
+    <string name="gallery" />
+    <string name="scan">scan</string>
+    <string name="result">Result</string>
+    <string name="result1">Result:</string>
+    <string name="todo1">TODO</string>
 </resources>
