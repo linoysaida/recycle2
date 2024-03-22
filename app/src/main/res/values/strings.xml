@@ -16,4 +16,13 @@
     <string name="result">Result</string>
     <string name="result1">Result:</string>
     <string name="todo1">TODO</string>
+
+    <string-array name="material_options">
+        <item>קרטון</item>
+        <item>אלומיניום</item>
+        <item>ניילון</item>
+        <item>פלסטיק</item>
+        <item>זכוכית</item>
+        <item>אחר</item>
+    </string-array>
 </resources>

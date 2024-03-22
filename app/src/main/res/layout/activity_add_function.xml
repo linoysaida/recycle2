@@ -1,9 +1,90 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AddFunction">
+    tools:context=".addProduct"
+    tools:ignore="ExtraText"
+    android:background="@color/grayBackground">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/addProduct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="50dp"
+        android:text="הוסף מוצר"
+        android:textColor="@color/greenSharon"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        tools:ignore="HardcodedText" />
+
+    <EditText
+        android:id="@+id/productName"
+        android:layout_width="371dp"
+        android:layout_height="66dp"
+        android:layout_below="@id/addProduct"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:autofillHints="Select Material"
+        android:hint="שם מוצר"
+        android:textColor="@color/black"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        tools:ignore="HardcodedText,TextContrastCheck,TextFields" />
+
+    <TextView
+        android:id="@+id/packageType"
+        android:layout_width="227dp"
+        android:layout_height="30dp"
+        android:layout_below="@id/productName"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:layout_toRightOf="@id/materialSpinner"
+        android:autofillHints="Select Material"
+        android:text="סוג אריזה"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        tools:ignore="HardcodedText,RtlHardcoded,TextContrastCheck,TextSizeCheck" />
+
+
+    <Spinner
+        android:id="@+id/materialSpinner"
+        android:layout_width="100dp"
+        android:layout_height="48dp"
+        android:layout_below="@id/productName"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:background="@color/cardview_light_background"
+        android:drawablePadding="20dp"
+        android:padding="20dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/scanButton"
+        android:layout_width="161dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/materialSpinner"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="39dp"
+        android:backgroundTint="@color/greenSharon"
+        android:text="@string/title_activity_scan"
+        android:textColor="#4E342E" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/addButton"
+        android:layout_width="113dp"
+        android:layout_height="55dp"
+        android:layout_below="@id/scanButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="39dp"
+        android:backgroundTint="@color/greenSharon"
+        android:text="Add"
+        android:textColor="@color/white"
+        tools:ignore="HardcodedText,TextContrastCheck" />
+
+</RelativeLayout>

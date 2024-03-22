@@ -17,4 +17,8 @@
     <color name="native_blue">#044A88</color>
         <color name="black_overlay">#66000000</color>
 
+    <color name="grayBackground">#1E1E1E</color>
+    <color name="grayButtons">#777676</color>
+    <color name="greenSharon">#75B62A</color>
+
 </resources>
