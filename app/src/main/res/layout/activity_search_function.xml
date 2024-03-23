@@ -6,16 +6,23 @@
     tools:context=".SearchFunction">
 
     <!-- Search input EditText -->
-    <EditText
-        android:id="@+id/searchInput"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Search..."
-        android:layout_margin="61dp"
-        android:autofillHints=""
-        tools:ignore="HardcodedText,TextFields" />
 
     <!-- Search results ListView -->
+    <EditText
+        android:id="@+id/searchInput"
+        android:layout_width="351dp"
+        android:layout_height="62dp"
+        android:layout_marginStart="61dp"
+        android:layout_marginLeft="61dp"
+        android:layout_marginTop="61dp"
+        android:layout_marginEnd="61dp"
+        android:layout_marginRight="61dp"
+        android:layout_marginBottom="61dp"
+        android:autofillHints=""
+        android:hint="Search..."
+        android:textColorHint="#546E7A"
+        tools:ignore="HardcodedText,TextFields" />
+
     <ListView
         android:id="@+id/searchResultsListView"
         android:layout_width="match_parent"

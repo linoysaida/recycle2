@@ -11,14 +11,13 @@
     android:padding="10dp"
     android:background="@color/grayBackground"
     android:gravity="center"
-    android:id="@+id/ll"
-    app:cardCornerRadius="8dp">
+    android:id="@+id/ll">
 
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        tools:context=".YourActivity">
+        tools:context=".HomePage">
 
         <com.google.android.material.appbar.AppBarLayout
             android:layout_width="match_parent"
@@ -71,7 +70,7 @@
                     android:contentDescription="TODO"
                     android:padding="10dp"
                     android:src="@android:drawable/ic_menu_search"
-                    tools:ignore="ContentDescription,HardcodedText,ImageContrastCheck" />
+                    tools:ignore="ContentDescription,HardcodedText" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -108,7 +107,7 @@
                     android:background="@drawable/cercleshapegreen"
                     android:padding="10dp"
                     android:src="@android:drawable/ic_menu_always_landscape_portrait"
-                    tools:ignore="ContentDescription,ImageContrastCheck" />
+                    tools:ignore="ContentDescription" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -152,7 +151,7 @@
                     android:background="@drawable/cercleshapegreen"
                     android:padding="10dp"
                     android:src="@android:drawable/ic_menu_add"
-                    tools:ignore="ContentDescription,ImageContrastCheck" />
+                    tools:ignore="ContentDescription" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -188,7 +187,7 @@
                     android:background="@drawable/cercleshapegreen"
                     android:padding="10dp"
                     android:src="@android:drawable/ic_dialog_map"
-                    tools:ignore="ContentDescription,ImageContrastCheck" />
+                    tools:ignore="ContentDescription" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -203,4 +202,5 @@
 
         </androidx.cardview.widget.CardView>
     </LinearLayout>
+
 </LinearLayout>
