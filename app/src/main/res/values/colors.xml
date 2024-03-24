@@ -17,8 +17,8 @@
     <color name="native_blue">#044A88</color>
         <color name="black_overlay">#66000000</color>
 
-    <color name="grayBackground">#1C1C1C</color>
-    <color name="grayButtons">#535151</color>
-    <color name="greenSharon">#A0F63E</color>
+    <color name="grayBackground">#C2EFA5</color>
+    <color name="grayButtons">#474947</color>
+    <color name="greenSharon">#63F642</color>
 
 </resources>

@@ -5,18 +5,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SlpashPage"
-    android:background="#76C542">
+    tools:context=".SlashPage"
+    android:background="#FFFFFF">
 
     <ImageView
         android:id="@+id/LOGO"
         android:layout_width="409dp"
-        android:layout_height="711dp"
+        android:layout_height="620dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginStart="2dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="5dp"
-        android:src="@drawable/splash"
+        android:src="@drawable/whitelogo"
 
         android:textColor="@color/black"
         android:textSize="35sp"
@@ -26,6 +26,6 @@
         android:layout_width="match_parent"
         android:layout_height="72dp"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="79dp" />
+        android:layout_marginBottom="148dp" />
 </RelativeLayout>
 

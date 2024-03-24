@@ -16,6 +16,18 @@
     <string name="result">Result</string>
     <string name="result1">Result:</string>
     <string name="todo1">TODO</string>
+    <string name="title_home" />
+    <string name="setting">setting</string>
+    <string name="ראשי" />
+    <string name="הגדרות" />
+    <string name="HomePage" />
+    <string name="Setting" />
+    <string name="scanner" />
+    <string name="search" />
+    <string name="main">ראשי</string>
+    <string name="setting1">הגדרות</string>
+    <string name="scan2">סרוק מוצר</string>
+    <string name="welcome_to_ecocode">Welcome to EcoCode!</string>
 
     <string-array name="material_options">
         <item>קרטון</item>
