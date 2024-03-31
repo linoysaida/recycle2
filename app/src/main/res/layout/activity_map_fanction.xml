@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MapFunction">
+    tools:context=".MapFunction"
+    android:background="#DCDCD6">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -30,6 +31,12 @@
             android:padding="10dp"
             android:textColorHint="#4E342E"
             tools:ignore="HardcodedText,TextFields" />
-
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="67dp"
+            android:layout_alignParentBottom="true"
+            android:background="#D5FFAB"
+            app:menu="@menu/navigation" />
     </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

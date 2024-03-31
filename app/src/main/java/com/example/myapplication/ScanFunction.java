@@ -70,7 +70,7 @@ public class ScanFunction extends AppCompatActivity {
 
         cameraBtn= findViewById(R.id.cameraBtn);
         gallery= findViewById(R.id.gallery);
-        image= findViewById(R.id.image);
+
         scan= findViewById(R.id.scan);
         result= findViewById(R.id.zxing_possible_result_points);
 

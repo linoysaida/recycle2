@@ -16,9 +16,7 @@ import java.util.List;
 public class SearchFunction extends AppCompatActivity {
 
 
-        private EditText searchInput;
-        private ListView searchResultsListView;
-        private ArrayAdapter<String> adapter;
+    private ArrayAdapter<String> adapter;
 
         private List<Product> productList;
 
@@ -29,8 +27,8 @@ public class SearchFunction extends AppCompatActivity {
             setContentView(R.layout.activity_search_function);
 
             // Initialize views
-            searchInput = findViewById(R.id.search);
-            searchResultsListView = findViewById(R.id.searchResultsListView);
+            EditText searchInput = findViewById(R.id.search);
+            ListView searchResultsListView = findViewById(R.id.searchResultsListView);
 
             // Initialize product list
             productList = new ArrayList<>();

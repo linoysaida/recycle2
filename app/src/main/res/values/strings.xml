@@ -28,6 +28,13 @@
     <string name="setting1">הגדרות</string>
     <string name="scan2">סרוק מוצר</string>
     <string name="welcome_to_ecocode">Welcome to EcoCode!</string>
+    <string name="add1">הוספת מוצר</string>
+    <string name="scan3">סריקת מוצר</string>
+    <string name="gallry11">גלריה</string>
+    <string name="גלריה">גלריה</string>
+    <string name="מצלמה">מצלמה</string>
+    <string name="סריקתמוצר">סריקת מוצר</string>
+    <string name="חיפושמוצר">חיפוש מוצר</string>
 
     <string-array name="material_options">
         <item>קרטון</item>

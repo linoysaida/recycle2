@@ -9,13 +9,13 @@
             android:textColor="@color/white"
             app:showAsAction="ifRoom" />
         <item
-            android:id="@+id/navigation_dashboard"
+            android:id="@+id/navigation_setting"
             android:icon="@drawable/baseline_app_settings_alt_24"
             android:title="@string/setting1"
             android:textColor="@color/white"
             app:showAsAction="ifRoom" />
         <item
-            android:id="@+id/navigation_notifications"
+            android:id="@+id/navigation_scan"
             android:icon="@android:drawable/ic_menu_always_landscape_portrait"
             android:title="@string/scan2"
             android:textColor="@color/white"

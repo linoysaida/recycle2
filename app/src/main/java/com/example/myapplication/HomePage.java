@@ -11,12 +11,13 @@ public class HomePage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.homepage1); // Make sure R.layout.homepage matches your XML file name
-
         // Find CardViews by their ID
         CardView addCard = findViewById(R.id.add);
         CardView searchCard = findViewById(R.id.search);
         CardView mapCard = findViewById(R.id.map);
         CardView scanCard = findViewById(R.id.scan);
+
+
 
         // Set click listeners for each CardView to start the respective activities
         addCard.setOnClickListener(v -> {
@@ -43,4 +44,5 @@ public class HomePage extends AppCompatActivity {
 
 
     }
+
 }
