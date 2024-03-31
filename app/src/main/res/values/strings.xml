@@ -35,6 +35,7 @@
     <string name="מצלמה">מצלמה</string>
     <string name="סריקתמוצר">סריקת מוצר</string>
     <string name="חיפושמוצר">חיפוש מוצר</string>
+    <string name="gmail">Gmail</string>
 
     <string-array name="material_options">
         <item>קרטון</item>

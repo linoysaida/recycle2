@@ -102,5 +102,19 @@
         app:cornerRadius="4dp"
         tools:ignore="HardcodedText" />
 
+    <TextView
+        android:id="@+id/signup"
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        android:layout_below="@id/loginbtn"
+        android:layout_marginTop="62dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:text="SignUp"
+        android:textAlignment="center"
+        android:textColor="#1155CC"
+        android:textSize="16sp"
+        tools:ignore="HardcodedText,TextSizeCheck,TextContrastCheck" />
+
 
 </RelativeLayout>
