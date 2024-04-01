@@ -12,6 +12,8 @@ import android.widget.ListView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -31,6 +33,13 @@ public class SearchFunction extends AppCompatActivity {
             // Initialize views
             EditText searchInput = findViewById(R.id.searchInput);
             ListView searchResultsListView = findViewById(R.id.searchResultsListView);
+
+
+            BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
+
+// מאזין ללחיצות על פריטים בתפריט התחתון
+            bottomNavigationView.setOnItemSelectedListener(this::onNavigationItemSelected);
+            // Populate the spinner with material options
 
             // Initialize product list
             productList = new ArrayList<>();

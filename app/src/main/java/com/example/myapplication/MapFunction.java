@@ -6,12 +6,22 @@ import android.view.MenuItem;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+
 public class MapFunction extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_map_fanction);
+
+
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
+
+// מאזין ללחיצות על פריטים בתפריט התחתון
+        bottomNavigationView.setOnItemSelectedListener(this::onNavigationItemSelected);
+        // Populate the spinner with material options
     }
 
     private boolean onNavigationItemSelected(MenuItem item) {

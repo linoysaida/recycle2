@@ -30,6 +30,7 @@ import androidx.core.content.ContextCompat;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.button.MaterialButton;
 import com.google.mlkit.vision.barcode.Barcode;
 import com.google.mlkit.vision.barcode.BarcodeScanner;
@@ -69,6 +70,11 @@ public class ScanFunction extends AppCompatActivity {
         setContentView(R.layout.activity_scan_function);
 
 
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
+
+// מאזין ללחיצות על פריטים בתפריט התחתון
+        bottomNavigationView.setOnItemSelectedListener(this::onNavigationItemSelected);
+        // Populate the spinner with material options
         cameraBtn= findViewById(R.id.cameraBtn);
         gallery= findViewById(R.id.gallery);
 

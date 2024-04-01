@@ -10,6 +10,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.button.MaterialButton;
 
 public class AddFunction extends AppCompatActivity {
@@ -23,7 +24,14 @@ public class AddFunction extends AppCompatActivity {
         MaterialButton addButton = findViewById(R.id.addButton);
         Spinner materialSpinner = findViewById(R.id.materialSpinner);
 
+
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
+
+// מאזין ללחיצות על פריטים בתפריט התחתון
+        bottomNavigationView.setOnItemSelectedListener(this::onNavigationItemSelected);
         // Populate the spinner with material options
+
+
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this,
                 android.R.layout.simple_spinner_item, getResources().getStringArray(R.array.material_options));
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);

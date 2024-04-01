@@ -17,7 +17,7 @@ public class SlashPage extends AppCompatActivity {
         handler.postDelayed(() -> {
             startActivity(new Intent(SlashPage.this, LogIn.class));
             finish();
-        }, 4000);
+        }, 400);
     }
 
 
