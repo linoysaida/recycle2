@@ -39,6 +39,7 @@
     <string name="sign_up">Sign Up</string>
     <string name="logout">logout</string>
     <string name="התנתקמהחשבון">התנתק מהחשבון</string>
+    <string name="title_activity_log_in" />
 
     <string-array name="material_options">
         <item>קרטון</item>
