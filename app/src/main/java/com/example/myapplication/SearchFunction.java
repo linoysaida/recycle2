@@ -1,9 +1,11 @@
 package com.example.myapplication;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.MenuItem;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
@@ -27,7 +29,7 @@ public class SearchFunction extends AppCompatActivity {
             setContentView(R.layout.activity_search_function);
 
             // Initialize views
-            EditText searchInput = findViewById(R.id.search);
+            EditText searchInput = findViewById(R.id.searchInput);
             ListView searchResultsListView = findViewById(R.id.searchResultsListView);
 
             // Initialize product list
@@ -97,4 +99,24 @@ public class SearchFunction extends AppCompatActivity {
             adapter.addAll(filteredProductNames);
             adapter.notifyDataSetChanged();
         }
+
+
+    private boolean onNavigationItemSelected(MenuItem item) {
+        if (item.getItemId() == R.id.action_home) { // החלף ב-ID המדויק של פריט "ראשי" שלך
+            // טען מחדש את HomePage או נווט אליו אם אתה נמצא בפעילות אחרת
+            Intent intent = new Intent(SearchFunction.this, HomePage.class);
+            startActivity(intent);
+            return true;
+            // אפשר להוסיף כאן מקרים נוספים לפריטים אחרים בתפריט
+        }
+
+        if (item.getItemId() == R.id.action_logout) { // החלף ב-ID המדויק של פריט "ראשי" שלך
+            // טען מחדש את HomePage או נווט אליו אם אתה נמצא בפעילות אחרת
+            Intent intent = new Intent(SearchFunction.this, LogIn.class);
+            startActivity(intent);
+            return true;
+            // אפשר להוסיף כאן מקרים נוספים לפריטים אחרים בתפריט
+        }
+        return false;
+    }
     }

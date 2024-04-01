@@ -36,6 +36,9 @@
     <string name="סריקתמוצר">סריקת מוצר</string>
     <string name="חיפושמוצר">חיפוש מוצר</string>
     <string name="gmail">Gmail</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="logout">logout</string>
+    <string name="התנתקמהחשבון">התנתק מהחשבון</string>
 
     <string-array name="material_options">
         <item>קרטון</item>

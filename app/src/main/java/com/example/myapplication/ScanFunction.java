@@ -12,6 +12,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -327,7 +328,24 @@ public class ScanFunction extends AppCompatActivity {
         }
     }
 
+    private boolean onNavigationItemSelected(MenuItem item) {
+        if (item.getItemId() == R.id.action_home) { // החלף ב-ID המדויק של פריט "ראשי" שלך
+            // טען מחדש את HomePage או נווט אליו אם אתה נמצא בפעילות אחרת
+            Intent intent = new Intent(ScanFunction.this, HomePage.class);
+            startActivity(intent);
+            return true;
+            // אפשר להוסיף כאן מקרים נוספים לפריטים אחרים בתפריט
+        }
 
+        if (item.getItemId() == R.id.action_logout) { // החלף ב-ID המדויק של פריט "ראשי" שלך
+            // טען מחדש את HomePage או נווט אליו אם אתה נמצא בפעילות אחרת
+            Intent intent = new Intent(ScanFunction.this, LogIn.class);
+            startActivity(intent);
+            return true;
+            // אפשר להוסיף כאן מקרים נוספים לפריטים אחרים בתפריט
+        }
+        return false;
+    }
 
 
 }

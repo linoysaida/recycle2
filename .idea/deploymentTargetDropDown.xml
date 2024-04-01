@@ -16,12 +16,12 @@
               <deviceKey>
                 <Key>
                   <type value="VIRTUAL_DEVICE_PATH" />
-                  <value value="C:\Users\Linoy\.android\avd\Pixel_7_API_VanillaIceCream.avd" />
+                  <value value="C:\Users\Linoy\.android\avd\Pixel_7_Pro_API_VanillaIceCream_1.avd" />
                 </Key>
               </deviceKey>
             </Target>
           </targetSelectedWithDropDown>
-          <timeTargetWasSelectedWithDropDown value="2024-03-31T09:06:25.198257800Z" />
+          <timeTargetWasSelectedWithDropDown value="2024-04-01T07:37:59.276390Z" />
         </State>
       </entry>
       <entry key="ScanFunction">

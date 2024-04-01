@@ -28,6 +28,14 @@ public class LogIn extends AppCompatActivity {
         MaterialButton loginbtn = findViewById(R.id.loginbtn);
         CheckBox showPasswordCheckbox = findViewById(R.id.showPasswordCheckbox);
 
+
+
+        TextView signupTextView = findViewById(R.id.signup);
+        signupTextView.setOnClickListener(v -> {
+            Intent intent = new Intent(LogIn.this, SignUp.class);
+            startActivity(intent);
+        });
+
         loginbtn.setOnClickListener((View v) -> {
             String usernameInput = username.getText().toString();
             String passwordInput = password.getText().toString();
@@ -82,4 +90,6 @@ public class LogIn extends AppCompatActivity {
         // Show the popup dialog
         popupDialog.show();
     }
+
+
 }

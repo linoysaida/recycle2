@@ -1,6 +1,8 @@
 package com.example.myapplication;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
@@ -44,5 +46,25 @@ public class AddFunction extends AppCompatActivity {
         });
 
 
+    }
+
+
+    private boolean onNavigationItemSelected(MenuItem item) {
+        if (item.getItemId() == R.id.action_home) { // החלף ב-ID המדויק של פריט "ראשי" שלך
+            // טען מחדש את HomePage או נווט אליו אם אתה נמצא בפעילות אחרת
+            Intent intent = new Intent(AddFunction.this, HomePage.class);
+            startActivity(intent);
+            return true;
+            // אפשר להוסיף כאן מקרים נוספים לפריטים אחרים בתפריט
+        }
+
+        if (item.getItemId() == R.id.action_logout) { // החלף ב-ID המדויק של פריט "ראשי" שלך
+            // טען מחדש את HomePage או נווט אליו אם אתה נמצא בפעילות אחרת
+            Intent intent = new Intent(AddFunction.this, LogIn.class);
+            startActivity(intent);
+            return true;
+            // אפשר להוסיף כאן מקרים נוספים לפריטים אחרים בתפריט
+        }
+        return false;
     }
 }

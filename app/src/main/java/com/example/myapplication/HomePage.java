@@ -2,8 +2,12 @@ package com.example.myapplication;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class HomePage extends AppCompatActivity {
 
@@ -16,6 +20,12 @@ public class HomePage extends AppCompatActivity {
         CardView searchCard = findViewById(R.id.search);
         CardView mapCard = findViewById(R.id.map);
         CardView scanCard = findViewById(R.id.scan);
+
+
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
+
+// מאזין ללחיצות על פריטים בתפריט התחתון
+        bottomNavigationView.setOnItemSelectedListener(this::onNavigationItemSelected);
 
 
 
@@ -45,4 +55,22 @@ public class HomePage extends AppCompatActivity {
 
     }
 
+    private boolean onNavigationItemSelected(MenuItem item) {
+        if (item.getItemId() == R.id.action_home) { // החלף ב-ID המדויק של פריט "ראשי" שלך
+            // טען מחדש את HomePage או נווט אליו אם אתה נמצא בפעילות אחרת
+            Intent intent = new Intent(HomePage.this, HomePage.class);
+            startActivity(intent);
+            return true;
+            // אפשר להוסיף כאן מקרים נוספים לפריטים אחרים בתפריט
+        }
+
+        if (item.getItemId() == R.id.action_logout) { // החלף ב-ID המדויק של פריט "ראשי" שלך
+            // טען מחדש את HomePage או נווט אליו אם אתה נמצא בפעילות אחרת
+            Intent intent = new Intent(HomePage.this, LogIn.class);
+            startActivity(intent);
+            return true;
+            // אפשר להוסיף כאן מקרים נוספים לפריטים אחרים בתפריט
+        }
+        return false;
+    }
 }

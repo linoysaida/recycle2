@@ -29,10 +29,11 @@
         android:layout_below="@id/addProduct"
         android:layout_marginTop="0dp"
         android:autofillHints="Select Material"
-        android:text="סוג מוצר"
+        android:hint="סוג מוצר"
         android:textColor="@color/black"
         android:textSize="25sp"
         android:textStyle="bold"
+        android:inputType="text"
         tools:ignore="HardcodedText,TextContrastCheck,TextFields" />
 
     <TextView

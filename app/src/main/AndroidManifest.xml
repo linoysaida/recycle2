@@ -39,12 +39,16 @@
             android:name=".LogIn"
             android:exported="true"
             android:label="@string/title_activity_map"
-            android:theme="@style/Theme.MyApplication" />
+            android:supportsRtl="true"
+            android:theme="@style/Theme.MyApplication"
+            tools:ignore="RtlEnabled" />
         <activity
             android:name=".MapFunction"
             android:exported="false"
             android:label="@string/title_activity_map"
-            android:theme="@style/Theme.MyApplication" />
+            android:supportsRtl="true"
+            android:theme="@style/Theme.MyApplication"
+            tools:ignore="RtlEnabled" />
         <activity
             android:name=".ScanFunction"
             android:exported="true"
@@ -54,12 +58,16 @@
             android:name=".SearchFunction"
             android:exported="false"
             android:label="@string/title_activity_search"
-            android:theme="@style/Theme.MyApplication" />
+            android:supportsRtl="true"
+            android:theme="@style/Theme.MyApplication"
+            tools:ignore="RtlEnabled" />
         <activity
             android:name=".AddFunction"
             android:exported="false"
             android:label="@string/title_activity_add"
-            android:theme="@style/Theme.MyApplication" />
+            android:supportsRtl="true"
+            android:theme="@style/Theme.MyApplication"
+            tools:ignore="RtlEnabled" />
         <activity
             android:name=".HomePage"
             android:exported="true">
