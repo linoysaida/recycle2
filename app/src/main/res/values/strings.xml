@@ -40,6 +40,11 @@
     <string name="logout">logout</string>
     <string name="התנתקמהחשבון">התנתק מהחשבון</string>
     <string name="title_activity_log_in" />
+    <string name="product_name">Product Name</string>
+    <string name="close">Close</string>
+    <string name="find_bin">Find Bin</string>
+    <string name="סגור">סגור</string>
+    <string name="פח">מצא פח</string>
 
     <string-array name="material_options">
         <item>קרטון</item>

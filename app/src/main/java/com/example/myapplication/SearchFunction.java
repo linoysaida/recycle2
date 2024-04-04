@@ -1,14 +1,23 @@
 package com.example.myapplication;
 
 import android.annotation.SuppressLint;
+import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.DisplayMetrics;
+import android.view.Gravity;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -40,6 +49,16 @@ public class SearchFunction extends AppCompatActivity {
 // מאזין ללחיצות על פריטים בתפריט התחתון
             bottomNavigationView.setOnItemSelectedListener(this::onNavigationItemSelected);
             // Populate the spinner with material options
+
+
+            searchResultsListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                    showProductDetailsDialog(productList.get(position));
+                }
+            });
+
+
 
             // Initialize product list
             productList = new ArrayList<>();
@@ -128,4 +147,53 @@ public class SearchFunction extends AppCompatActivity {
         }
         return false;
     }
+
+    private void showProductDetailsDialog(Product product) {
+        // Create a dialog
+        final Dialog dialog = new Dialog(this);
+        dialog.setContentView(R.layout.activity_product_details);
+
+        // Initialize dialog views with product details
+        TextView productNameTextView = dialog.findViewById(R.id.productNameTextView);
+        productNameTextView.setText(product.getName());
+
+        // Initialize other views...
+
+        // Set up close button
+        Button closeButton = dialog.findViewById(R.id.closeButton);
+        closeButton.setOnClickListener(v -> dialog.dismiss());
+
+        // Set up find bin button
+        Button findBinButton = dialog.findViewById(R.id.findBinButton);
+        findBinButton.setOnClickListener(v -> {
+            // Implement action to find the disposal bin
+            dialog.dismiss();
+        });
+
+        // Get the window of the dialog
+        Window window = dialog.getWindow();
+        if (window != null) {
+            // Set the width of the dialog to 70% of the screen width
+            DisplayMetrics displayMetrics = new DisplayMetrics();
+            getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
+            int dialogWidth = (int)(displayMetrics.widthPixels * 0.7);
+            int dialogHeight = WindowManager.LayoutParams.WRAP_CONTENT; // Adjust height as necessary
+            window.setLayout(dialogWidth, dialogHeight);
+
+            // Center the dialog in the screen
+            WindowManager.LayoutParams layoutParams = window.getAttributes();
+            layoutParams.gravity = Gravity.CENTER;
+            window.setAttributes(layoutParams);
+        }
+
+        dialog.show();
+
+        findBinButton.setOnClickListener(v -> {
+            Intent intent = new Intent(SearchFunction.this, MapFunction.class);
+            intent.putExtra("ProductCategory", product.getCategory());
+            startActivity(intent);
+            dialog.dismiss();
+        });
+    }
+
     }

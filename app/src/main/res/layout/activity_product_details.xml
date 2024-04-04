@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#595656"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/productNameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/product_name"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <!-- Add more TextViews for product details here -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/closeButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/סגור"
+            android:backgroundTint="@color/greenSharon"
+            app:cornerRadius="4dp"
+            android:textColor="@color/black"
+            android:layout_marginEnd="16dp"/>
+
+        <Button
+            android:id="@+id/findBinButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/greenSharon"
+            app:cornerRadius="4dp"
+            android:textColor="@color/black"
+            android:text="@string/פח" />
+    </LinearLayout>
+</LinearLayout>

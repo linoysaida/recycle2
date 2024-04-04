@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -21,37 +22,35 @@
         android:textColor="@color/black"
         app:cornerRadius="4dp" />
 
-    <com.google.android.material.button.MaterialButton
-
-        android:id="@+id/gallery"
-        android:layout_width="239dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/cameraBtn"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="5dp"
-        android:layout_centerHorizontal="true"
-        android:backgroundTint="@color/greenSharon"
-        android:text="@string/גלריה"
-        android:textColor="@color/black"
-        app:cornerRadius="4dp" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/scan"
+        android:id="@+id/findbin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/gallery"
-        android:layout_marginTop="43dp"
+        android:layout_below="@id/cameraBtn"
+        android:layout_marginTop="116dp"
         android:backgroundTint="@color/black"
-        android:text="סריקה"
+        android:text="מצא פח"
         android:textColor="#FFFFFF"
-        app:cornerRadius="4dp" />
+        app:cornerRadius="4dp"
+        tools:ignore="HardcodedText" />
 
     <TextView
+        android:id="@+id/result"
         style="@style/TextAppearance.MaterialComponents.Body1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/result1"
-        android:layout_below="@id/scan"/>
+        android:layout_below="@id/findbin"
+        android:layout_marginTop="-123dp"
+        android:text="@string/result1" />
+
+    <ImageView
+        android:id="@+id/captured_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:visibility="gone"
+        tools:ignore="ContentDescription" />
 
     <TextView
         android:id="@+id/zxing_possible_result_points"
@@ -87,4 +86,10 @@
         android:layout_alignParentBottom="true"
         android:background="#D5FFAB"
         app:menu="@menu/navigation" />
+
+
+    <androidx.camera.view.PreviewView
+        android:id="@+id/previewView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 </RelativeLayout>
