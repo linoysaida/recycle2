@@ -54,4 +54,16 @@
         <item>זכוכית</item>
         <item>אחר</item>
     </string-array>
+
+
+
+    <string-array name="category_options">
+        <item>בקבוקים</item>
+        <item>מוצרי חלב</item>
+        <item>מוצרים יבשים</item>
+        <item>קפואים</item>
+        <item>מוצרי חשמל</item>
+        <item>מוצרי ניקיון</item>
+        <item>אחר</item>
+    </string-array>
 </resources>

@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -21,44 +22,55 @@
         android:textStyle="bold"
         tools:ignore="HardcodedText" />
 
-
-    <EditText
-        android:id="@+id/productName"
-        android:layout_width="match_parent"
-        android:layout_height="83dp"
+    <TextView
+        android:id="@+id/categoryType"
+        android:layout_width="214dp"
+        android:layout_height="78dp"
         android:layout_below="@id/addProduct"
-        android:layout_marginTop="0dp"
-        android:autofillHints="Select Material"
-        android:hint="סוג מוצר"
+        android:layout_marginLeft="52dp"
+        android:layout_marginTop="50dp"
+        android:layout_toRightOf="@id/materialSpinner"
+        android:text="קטגוריית מוצר:"
         android:textColor="@color/black"
-        android:textSize="25sp"
+        android:textSize="15sp"
         android:textStyle="bold"
-        android:inputType="text"
-        tools:ignore="HardcodedText,TextContrastCheck,TextFields" />
+        tools:ignore="HardcodedText,RtlHardcoded,TextContrastCheck,TextSizeCheck" />
 
     <TextView
         android:id="@+id/packageType"
-        android:layout_width="288dp"
-        android:layout_height="30dp"
-        android:layout_below="@id/productName"
+        android:layout_width="214dp"
+        android:layout_height="78dp"
+        android:layout_below="@id/categoryType"
         android:layout_centerHorizontal="true"
-        android:layout_marginLeft="28dp"
-        android:layout_marginTop="41dp"
+        android:layout_marginLeft="110dp"
+        android:layout_marginTop="35dp"
         android:layout_toRightOf="@id/materialSpinner"
-        android:autofillHints="Select Material"
+        android:autofillHints="בחר מוצר"
         android:text="סוג אריזה"
         android:textColor="@color/black"
-        android:textSize="20sp"
+        android:textSize="15sp"
         android:textStyle="bold"
         tools:ignore="HardcodedText,RtlHardcoded,TextContrastCheck,TextSizeCheck" />
 
     <Spinner
-        android:id="@+id/materialSpinner"
-        android:layout_width="100dp"
-        android:layout_height="48dp"
-        android:layout_below="@id/productName"
-        android:layout_centerHorizontal="true"
+        android:id="@+id/productCategory"
+        android:layout_width="214dp"
+        android:layout_height="78dp"
+        android:layout_below="@id/addProduct"
         android:layout_marginTop="40dp"
+        android:background="@drawable/text_border"
+        android:drawablePadding="20dp"
+        android:padding="20dp"
+        android:spinnerMode="dropdown"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black" />
+
+    <Spinner
+        android:id="@+id/materialSpinner"
+        android:layout_width="214dp"
+        android:layout_height="78dp"
+        android:layout_below="@id/productCategory"
+        android:layout_marginTop="35dp"
         android:background="@drawable/text_border"
         android:drawablePadding="20dp"
         android:padding="20dp"
