@@ -57,10 +57,6 @@ public class ScanFunction extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_scan_function);
 
-        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
-
-// מאזין ללחיצות על פריטים בתפריט התחתון
-        bottomNavigationView.setOnItemSelectedListener(this::onNavigationItemSelected);
 
         setContentView(R.layout.activity_scan_function); // וודא שהשם תואם לשם של קובץ ה-layout שלך
 
@@ -68,6 +64,14 @@ public class ScanFunction extends AppCompatActivity {
         previewView = findViewById(R.id.previewView);
         resultTextView = findViewById(R.id.result);
         MaterialButton scanButton = findViewById(R.id.cameraBtn);
+
+
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
+
+// מאזין ללחיצות על פריטים בתפריט התחתון
+        bottomNavigationView.setOnItemSelectedListener(this::onNavigationItemSelected);
+
+
 
         scanButton.setOnClickListener(v -> {
             if (ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED) {

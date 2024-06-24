@@ -1,20 +1,21 @@
 package com.example.myapplication;
 
 import android.annotation.SuppressLint;
-import android.app.Dialog;
-import android.content.Intent;
-import android.os.Bundle;
-import android.text.InputType;
-import android.view.View;
-import android.widget.Button;
-import android.widget.CheckBox;
-import android.widget.EditText;
-import android.widget.TextView;
-import android.widget.Toast;
+        import android.app.Dialog;
+        import android.content.Intent;
+        import android.os.Bundle;
+        import android.text.InputType;
+        import android.view.View;
+        import android.widget.Button;
+        import android.widget.CheckBox;
+        import android.widget.EditText;
+        import android.widget.TextView;
 
-import androidx.appcompat.app.AppCompatActivity;
+        import androidx.appcompat.app.AppCompatActivity;
 
-import com.google.android.material.button.MaterialButton;
+        import com.google.android.material.button.MaterialButton;
+        import com.google.firebase.FirebaseApp;
+        import com.google.firebase.auth.FirebaseAuth;
 
 public class LogIn extends AppCompatActivity {
 
@@ -29,6 +30,13 @@ public class LogIn extends AppCompatActivity {
         CheckBox showPasswordCheckbox = findViewById(R.id.showPasswordCheckbox);
 
 
+        // Initialize Firebase
+        if (FirebaseApp.getApps(this).isEmpty()) {
+            FirebaseApp.initializeApp(this);
+        }
+
+        // Now you can use FirebaseAuth
+        FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
 
         TextView signupTextView = findViewById(R.id.signup);
         signupTextView.setOnClickListener(v -> {
@@ -36,18 +44,10 @@ public class LogIn extends AppCompatActivity {
             startActivity(intent);
         });
 
-        loginbtn.setOnClickListener((View v) -> {
-            String usernameInput = username.getText().toString();
-            String passwordInput = password.getText().toString();
 
-            if (usernameInput.equals("admin") && passwordInput.equals("admin")) {
-                Toast.makeText(LogIn.this, "Login successful", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(LogIn.this, HomePage.class);
-                startActivity(intent);
-            } else {
-                Toast.makeText(LogIn.this, "Login failed", Toast.LENGTH_SHORT).show();
-            }
-        });
+
+
+
 
         showPasswordCheckbox.setOnCheckedChangeListener((buttonView, isChecked) -> {
             if (isChecked) {
@@ -93,3 +93,4 @@ public class LogIn extends AppCompatActivity {
 
 
 }
+
